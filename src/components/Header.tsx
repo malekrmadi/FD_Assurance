@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
 
+import logoNavbar from '../assets/fd-assurance-logo-navbar.png';
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -23,13 +25,13 @@ const Header = () => {
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
-    
-    // If we're not on the home page, navigate there first
+
+    // If we're not on the home page, navigate there with the anchor
     if (location.pathname !== '/') {
       window.location.href = '/' + href;
       return;
     }
-    
+
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -50,32 +52,31 @@ const Header = () => {
     <header className="header">
       <div className="header-container">
         <Link to="/" className="header-logo" onClick={closeMenus}>
-          <span className="logo-text">FD</span>
-          <span className="logo-suffix">Assurance</span>
+          <img src={logoNavbar} alt="FD Assurance Logo" className="navbar-logo" />
         </Link>
 
         <nav className={`header-nav ${isMenuOpen ? 'is-open' : ''}`}>
-          <div 
+          <div
             className="nav-dropdown"
             onMouseEnter={() => setIsDropdownOpen(true)}
             onMouseLeave={() => setIsDropdownOpen(false)}
           >
-            <button 
+            <button
               className="nav-link nav-dropdown-trigger"
               onClick={handleDropdownClick}
               aria-expanded={isDropdownOpen}
             >
               Nos offres
-              <svg 
-                className={`dropdown-icon ${isDropdownOpen ? 'is-open' : ''}`} 
-                viewBox="0 0 24 24" 
-                width="16" 
+              <svg
+                className={`dropdown-icon ${isDropdownOpen ? 'is-open' : ''}`}
+                viewBox="0 0 24 24"
+                width="16"
                 height="16"
               >
-                <path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </button>
-            
+
             <div className={`dropdown-menu ${isDropdownOpen ? 'is-open' : ''}`}>
               {insuranceLinks.map((link) => (
                 <Link
@@ -102,15 +103,15 @@ const Header = () => {
           ))}
         </nav>
 
-        <a 
-          href="#contact" 
+        <a
+          href="#contact"
           className="header-cta btn btn-primary"
           onClick={(e) => scrollToSection(e, '#contact')}
         >
           Demander un devis
         </a>
 
-        <button 
+        <button
           className="header-menu-toggle"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Menu"

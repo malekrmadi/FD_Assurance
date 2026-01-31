@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import carCover from '../assets/carcover.jpg';
+import autoDetail from '../assets/auto-detail.jpg';
 import './AssuranceAuto.css';
 
 const AssuranceAuto = () => {
@@ -9,36 +11,60 @@ const AssuranceAuto = () => {
             <Header />
             <main className="insurance-page">
                 {/* Hero Section */}
-                <section className="insurance-hero">
+                <section
+                    className="insurance-hero"
+                    style={{ backgroundImage: `url(${carCover})` }}
+                >
                     <div className="container">
                         <div className="hero-content">
                             <h1 className="hero-title">Assurance Auto</h1>
                             <p className="hero-subtitle">
-                                Protégez votre véhicule avec une assurance auto adaptée à vos besoins et à votre budget.
+                                Protégez votre véhicule avec une assurance auto adaptée à vos besoins.
                                 FD Assurance vous accompagne pour trouver la meilleure couverture.
                             </p>
                             <a href="#contact-section" className="btn btn-primary">
-                                Obtenir un devis gratuit
+                                Contactez-nous pour plus de détails
                             </a>
                         </div>
                     </div>
                 </section>
 
-                {/* Présentation */}
-                <section className="section insurance-intro">
+                {/* Section Détail / Présentation alternative */}
+                <section className="section insurance-detail">
+                    <div className="container">
+                        <div className="detail-grid">
+                            <div className="detail-image-wrapper">
+                                <img src={autoDetail} alt="Détail Assurance Auto" className="detail-image" />
+                            </div>
+                            <div className="detail-content">
+                                <h2>Sérénité et sécurité sur la route</h2>
+                                <p>
+                                    L'assurance automobile est bien plus qu'une obligation légale. C'est le garant de votre
+                                    tranquillité d'esprit à chaque kilomètre. Que vous soyez un conducteur quotidien ou
+                                    occasionnel, nous avons la solution qui vous correspond.
+                                </p>
+                                <p>
+                                    Notre approche consiste à évaluer précisément vos risques réels pour vous proposer
+                                    des garanties utiles, sans options superflues qui alourdissent votre cotisation.
+                                </p>
+                                <p>
+                                    En tant que courtier indépendant, nous comparons les offres de multiples assureurs
+                                    pour vous assurer le meilleur rapport qualité-prix du marché.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Présentation (Ancienne section intro, légèrement modifiée) */}
+                <section className="section section-alt insurance-intro">
                     <div className="container">
                         <div className="intro-content">
                             <h2>Une protection complète pour votre véhicule</h2>
                             <p>
-                                L'assurance automobile est obligatoire pour circuler en toute légalité. Au-delà de cette obligation,
-                                elle vous protège financièrement en cas d'accident, de vol ou de dommages. Que vous recherchiez
-                                une assurance au tiers, intermédiaire ou tous risques, FD Assurance analyse vos besoins pour vous
-                                proposer les garanties les plus adaptées.
-                            </p>
-                            <p>
-                                En tant que courtier indépendant, nous comparons les offres de multiples assureurs pour vous garantir
-                                le meilleur rapport qualité-prix. Notre expertise vous permet d'éviter les pièges des contrats
-                                inadaptés et de bénéficier d'une couverture sur mesure.
+                                Au-delà de la garantie responsabilité civile, elle vous protège financièrement en cas d'accident,
+                                de vol ou de dommages. Que vous recherchiez une assurance au tiers, intermédiaire ou tous risques,
+                                FD Assurance analyse vos besoins pour vous proposer les garanties les plus adaptées.
                             </p>
                         </div>
                     </div>
@@ -154,7 +180,7 @@ const AssuranceAuto = () => {
                             </p>
                             <p>
                                 Chaque contrat d'assurance est unique et doit être adapté à votre situation personnelle.
-                                Nous vous invitons à nous contacter pour obtenir une étude personnalisée et un devis gratuit.
+                                Nous vous invitons à nous contacter pour obtenir une étude personnalisée.
                             </p>
                         </div>
                     </div>
@@ -165,10 +191,10 @@ const AssuranceAuto = () => {
                     <div className="container">
                         <div className="cta-content">
                             <h2>Prêt à protéger votre véhicule ?</h2>
-                            <p>Contactez FD Assurance pour obtenir un devis personnalisé et gratuit</p>
+                            <p>Contactez FD Assurance pour obtenir une étude personnalisée</p>
                             <div className="cta-buttons">
                                 <Link to="/#contact" className="btn btn-primary">
-                                    Demander un devis
+                                    Contactez-nous pour plus de détails
                                 </Link>
                                 <Link to="/" className="btn btn-secondary">
                                     Retour à l'accueil

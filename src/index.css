@@ -216,6 +216,7 @@ select {
 
 .btn-primary:hover {
   background-color: var(--color-primary-dark);
+  color: var(--color-white);
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
@@ -228,6 +229,7 @@ select {
 
 .btn-secondary:hover {
   background-color: var(--color-primary-light);
+  color: var(--color-primary);
 }
 
 .btn-ghost {

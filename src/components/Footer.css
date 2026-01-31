@@ -13,21 +13,13 @@
 .footer-logo {
   display: flex;
   align-items: center;
-  gap: var(--spacing-xs);
   text-decoration: none;
   margin-bottom: var(--spacing-md);
 }
 
-.footer-logo .logo-text {
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-white);
-}
-
-.footer-logo .logo-suffix {
-  font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-medium);
-  color: var(--color-text-muted);
+.footer-logo-img {
+  height: 54px;
+  width: auto;
 }
 
 .footer-tagline {

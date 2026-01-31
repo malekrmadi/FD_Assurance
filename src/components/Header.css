@@ -22,20 +22,12 @@
 .header-logo {
   display: flex;
   align-items: center;
-  gap: var(--spacing-xs);
   text-decoration: none;
 }
 
-.logo-text {
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-primary);
-}
-
-.logo-suffix {
-  font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-medium);
-  color: var(--color-text);
+.navbar-logo {
+  height: 48px;
+  width: auto;
 }
 
 .header-nav {

@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import liabilityCover from '../assets/liability-cover.jpg';
+import liabilityDetail from '../assets/liability-detail.jpg';
 import './AssuranceAuto.css'; // Using the same CSS for consistency
 
 const ResponsabiliteCivile = () => {
@@ -9,7 +11,10 @@ const ResponsabiliteCivile = () => {
             <Header />
             <main className="insurance-page">
                 {/* Hero Section */}
-                <section className="insurance-hero">
+                <section
+                    className="insurance-hero"
+                    style={{ backgroundImage: `url(${liabilityCover})` }}
+                >
                     <div className="container">
                         <div className="hero-content">
                             <h1 className="hero-title">Responsabilité Civile</h1>
@@ -18,27 +23,48 @@ const ResponsabiliteCivile = () => {
                                 FD Assurance sécurise votre responsabilité au quotidien.
                             </p>
                             <a href="#contact-section" className="btn btn-primary">
-                                Demander un conseil
+                                Contactez-nous pour plus de détails
                             </a>
                         </div>
                     </div>
                 </section>
 
-                {/* Présentation */}
-                <section className="section insurance-intro">
+                {/* Section Détail */}
+                <section className="section insurance-detail">
+                    <div className="container">
+                        <div className="detail-grid">
+                            <div className="detail-image-wrapper">
+                                <img src={liabilityDetail} alt="Détail Responsabilité Civile" className="detail-image" />
+                            </div>
+                            <div className="detail-content">
+                                <h2>Protéger votre avenir financier face à l'imprévu</h2>
+                                <p>
+                                    Que ce soit par inattention, par imprudence ou par négligence, nous pouvons tous causer
+                                    un préjudice à un tiers. La Responsabilité Civile est l'obligation de réparer ces dommages.
+                                </p>
+                                <p>
+                                    Sans une couverture adéquate, les conséquences financières de ces actes peuvent être
+                                    dévastatrices pour votre patrimoine. FD Assurance vous aide à souscrire les garanties
+                                    nécessaires pour couvrir les dommages corporels, matériels et immatériels.
+                                </p>
+                                <p>
+                                    Nos experts analysent vos activités personnelles et professionnelles pour garantir
+                                    que chaque risque est anticipé et correctement assuré.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Présentation (modifiée) */}
+                <section className="section section-alt insurance-intro">
                     <div className="container">
                         <div className="intro-content">
-                            <h2>Une protection indispensable pour tous</h2>
+                            <h2>Une protection indispensable pour tous et partout</h2>
                             <p>
-                                "Tout fait quelconque de l'homme, qui cause à autrui un dommage, oblige celui par la faute
-                                duquel il est arrivé, à le réparer." Ce principe du Code Civil est au cœur de la
-                                Responsabilité Civile (RC). Que ce soit par inattention, par imprudence ou par
-                                négligence, nous pouvons tous causer un préjudice à un tiers.
-                            </p>
-                            <p>
-                                FD Assurance vous aide à souscrire les garanties nécessaires pour couvrir les dommages
-                                corporels, matériels et immatériels dont vous pourriez être tenu pour responsable,
-                                dans le cadre de votre vie privée ou professionnelle.
+                                Au-delà du cadre familial, nous proposons des solutions de Responsabilité Civile Pro (RC Pro)
+                                spécifiques pour les professions libérales et les artisans. Notre rôle est de vérifier
+                                les doublons et d'optimiser vos plafonds d'indemnisation pour une sécurité maximale.
                             </p>
                         </div>
                     </div>
@@ -164,11 +190,11 @@ const ResponsabiliteCivile = () => {
                 <section id="contact-section" className="section insurance-cta">
                     <div className="container">
                         <div className="cta-content">
-                            <h2>Mieux vaut prévenir que guérir</h2>
-                            <p>Vérifions ensemble si votre responsabilité est correctement couverte</p>
+                            <h2>Protégez votre avenir et votre patrimoine</h2>
+                            <p>Contactez FD Assurance pour une étude personnalisée de vos risques</p>
                             <div className="cta-buttons">
                                 <Link to="/#contact" className="btn btn-primary">
-                                    Faire le point
+                                    Contactez-nous pour plus de détails
                                 </Link>
                                 <Link to="/" className="btn btn-secondary">
                                     Retour à l'accueil

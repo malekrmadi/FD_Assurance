@@ -1,4 +1,4 @@
-import aboutImage from '../assets/about-office.jpg';
+import aboutImage from '../assets/about.jpg';
 import './About.css';
 
 const features = [
@@ -26,32 +26,32 @@ const About = () => {
       <div className="container">
         <div className="about-grid">
           <div className="about-image-wrapper">
-            <img 
-              src={aboutImage} 
-              alt="Bureau moderne FD Assurance" 
+            <img
+              src={aboutImage}
+              alt=" Cabinet FD Assurance"
               className="about-image"
             />
           </div>
-          
+
           <div className="about-content">
             <h2 className="about-title">Le cabinet FD Assurance</h2>
             <p className="about-text">
-              FD Assurance est un cabinet de courtage indépendant spécialisé dans l'accompagnement 
-              des particuliers et des professionnels. Notre mission : vous aider à identifier 
-              les garanties dont vous avez réellement besoin et à trouver les solutions les plus 
+              FD Assurance est un cabinet de courtage indépendant spécialisé dans l'accompagnement
+              des particuliers et des professionnels. Notre mission : vous aider à identifier
+              les garanties dont vous avez réellement besoin et à trouver les solutions les plus
               adaptées à votre situation.
             </p>
             <p className="about-text">
-              Grâce à notre indépendance vis-à-vis des compagnies d'assurance, nous vous proposons 
+              Grâce à notre indépendance vis-à-vis des compagnies d'assurance, nous vous proposons
               une analyse objective et des solutions personnalisées, sans parti pris.
             </p>
-            
+
             <div className="about-features">
               {features.map((feature, index) => (
                 <div key={index} className="about-feature">
                   <div className="about-feature-icon">
                     <svg viewBox="0 0 24 24" className="icon">
-                      <polyline points="20 6 9 17 4 12" strokeLinecap="round" strokeLinejoin="round"/>
+                      <polyline points="20 6 9 17 4 12" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </div>
                   <div className="about-feature-content">

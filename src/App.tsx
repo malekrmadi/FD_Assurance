@@ -6,8 +6,11 @@ import AssuranceHabitation from "./pages/AssuranceHabitation";
 import SantePrevoyance from "./pages/SantePrevoyance";
 import ResponsabiliteCivile from "./pages/ResponsabiliteCivile";
 
+import ScrollToTop from "./components/ScrollToTop";
+
 const App = () => (
   <BrowserRouter>
+    <ScrollToTop />
     <Routes>
       <Route path="/" element={<Index />} />
       <Route path="/assurance-auto" element={<AssuranceAuto />} />

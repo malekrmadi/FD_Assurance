@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import habitatCover from '../assets/habitatcover.jpg';
+import homeDetail from '../assets/home-detail.jpg';
 import './AssuranceAuto.css'; // Using the same CSS for consistency
 
 const AssuranceHabitation = () => {
@@ -9,7 +11,10 @@ const AssuranceHabitation = () => {
             <Header />
             <main className="insurance-page">
                 {/* Hero Section */}
-                <section className="insurance-hero">
+                <section
+                    className="insurance-hero"
+                    style={{ backgroundImage: `url(${habitatCover})` }}
+                >
                     <div className="container">
                         <div className="hero-content">
                             <h1 className="hero-title">Assurance Habitation</h1>
@@ -18,26 +23,49 @@ const AssuranceHabitation = () => {
                                 la couverture idéale pour votre maison ou votre appartement.
                             </p>
                             <a href="#contact-section" className="btn btn-primary">
-                                Obtenir un devis gratuit
+                                Contactez-nous pour plus de détails
                             </a>
                         </div>
                     </div>
                 </section>
 
-                {/* Présentation */}
-                <section className="section insurance-intro">
+                {/* Section Détail */}
+                <section className="section insurance-detail">
+                    <div className="container">
+                        <div className="detail-grid">
+                            <div className="detail-image-wrapper">
+                                <img src={homeDetail} alt="Détail Assurance Habitation" className="detail-image" />
+                            </div>
+                            <div className="detail-content">
+                                <h2>Sérénité et sécurité pour votre logement</h2>
+                                <p>
+                                    Votre foyer est bien plus qu'un simple toit. C'est l'endroit où vous construisez votre vie.
+                                    Une bonne assurance habitation est essentielle pour faire face aux imprévus : dégâts des eaux,
+                                    incendie, vol ou catastrophes naturelles.
+                                </p>
+                                <p>
+                                    FD Assurance vous accompagne pour décrypter les contrats Multirisques Habitation (MRH) et
+                                    sélectionner les options qui comptent vraiment pour vous, que vous soyez propriétaire,
+                                    locataire ou propriétaire non-occupant.
+                                </p>
+                                <p>
+                                    Grâce à notre expertise, nous identifions les spécificités de votre logement pour
+                                    garantir une indemnisation rapide et juste en cas de sinistre.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Présentation (modifiée pour éviter les doublons avec le détail) */}
+                <section className="section section-alt insurance-intro">
                     <div className="container">
                         <div className="intro-content">
-                            <h2>Sérénité et sécurité pour votre logement</h2>
+                            <h2>Une protection sur mesure pour votre patrimoine</h2>
                             <p>
-                                Votre foyer est bien plus qu'un simple toit. C'est l'endroit où vous construisez votre vie.
-                                Une bonne assurance habitation est essentielle pour faire face aux imprévus : dégâts des eaux,
-                                incendie, vol ou catastrophes naturelles.
-                            </p>
-                            <p>
-                                FD Assurance vous accompagne pour décrypter les contrats Multirisques Habitation (MRH) et
-                                sélectionner les options qui comptent vraiment pour vous, que vous soyez propriétaire,
-                                locataire ou propriétaire non-occupant.
+                                Chaque logement est unique, tout comme vos besoins de protection. De la garantie des dépendances
+                                à la protection de vos objets de valeur, nous construisons avec vous le contrat qui sécurisera
+                                durablement votre environnement familial et vos investissements immobiliers.
                             </p>
                         </div>
                     </div>
@@ -161,10 +189,10 @@ const AssuranceHabitation = () => {
                     <div className="container">
                         <div className="cta-content">
                             <h2>Votre foyer mérite la meilleure protection</h2>
-                            <p>Contactez FD Assurance pour une étude gratuite et sans engagement</p>
+                            <p>Contactez FD Assurance pour une étude personnalisée</p>
                             <div className="cta-buttons">
                                 <Link to="/#contact" className="btn btn-primary">
-                                    Demander un devis
+                                    Contactez-nous pour plus de détails
                                 </Link>
                                 <Link to="/" className="btn btn-secondary">
                                     Retour à l'accueil

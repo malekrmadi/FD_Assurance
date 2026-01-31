@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import healthCover from '../assets/healthcover.jpg';
+import healthDetail from '../assets/health-detail.jpg';
 import './AssuranceAuto.css'; // Using the same CSS for consistency
 
 const SantePrevoyance = () => {
@@ -9,7 +11,10 @@ const SantePrevoyance = () => {
             <Header />
             <main className="insurance-page">
                 {/* Hero Section */}
-                <section className="insurance-hero">
+                <section
+                    className="insurance-hero"
+                    style={{ backgroundImage: `url(${healthCover})` }}
+                >
                     <div className="container">
                         <div className="hero-content">
                             <h1 className="hero-title">Santé & Prévoyance</h1>
@@ -18,27 +23,48 @@ const SantePrevoyance = () => {
                                 complètes pour couvrir vos frais de santé et anticiper les aléas de la vie.
                             </p>
                             <a href="#contact-section" className="btn btn-primary">
-                                Prendre rendez-vous
+                                Contactez-nous pour plus de détails
                             </a>
                         </div>
                     </div>
                 </section>
 
-                {/* Présentation */}
-                <section className="section insurance-intro">
+                {/* Section Détail */}
+                <section className="section insurance-detail">
+                    <div className="container">
+                        <div className="detail-grid">
+                            <div className="detail-image-wrapper">
+                                <img src={healthDetail} alt="Détail Santé & Prévoyance" className="detail-image" />
+                            </div>
+                            <div className="detail-content">
+                                <h2>Votre capital santé est votre bien le plus précieux</h2>
+                                <p>
+                                    Face à l'évolution des remboursements de la Sécurité Sociale, disposer d'une excellente
+                                    complémentaire santé est devenu indispensable pour garantir l'accès aux meilleurs soins
+                                    pour toute la famille.
+                                </p>
+                                <p>
+                                    Au-delà du remboursement des soins, la prévoyance permet de maintenir votre niveau de vie
+                                    et celui de vos proches en cas d'imprévus (arrêt de travail, invalidité).
+                                </p>
+                                <p>
+                                    Chez FD Assurance, nous analysons vos besoins réels (optique, dentaire, hospitalisation)
+                                    pour vous proposer une couverture qui vous ressemble, sans payer pour des garanties inutiles.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Présentation (modifiée) */}
+                <section className="section section-alt insurance-intro">
                     <div className="container">
                         <div className="intro-content">
-                            <h2>Votre capital santé, notre priorité</h2>
+                            <h2>Un accompagnement humain pour des enjeux essentiels</h2>
                             <p>
-                                Face à l'évolution des remboursements de la Sécurité Sociale, disposer d'une excellente
-                                complémentaire santé est devenu indispensable. De même, la prévoyance permet de maintenir
-                                votre niveau de vie et celui de votre famille en cas d'arrêt de travail, d'invalidité
-                                ou de décès.
-                            </p>
-                            <p>
-                                Chez FD Assurance, nous ne nous contentons pas de vous vendre un contrat. Nous analysons
-                                vos besoins réels (optique, dentaire, hospitalisation) pour vous proposer une couverture
-                                qui vous ressemble, sans payer pour des garanties inutiles.
+                                Nous ne nous contentons pas de vous proposer un contrat. Notre valeur ajoutée réside dans
+                                le conseil durable et l'adaptation constante de vos garanties à votre situation familiale
+                                et professionnelle, avec une attention particulière pour les indépendants et les dirigeants.
                             </p>
                         </div>
                     </div>
@@ -164,11 +190,11 @@ const SantePrevoyance = () => {
                 <section id="contact-section" className="section insurance-cta">
                     <div className="container">
                         <div className="cta-content">
-                            <h2>Anticiper, c'est protéger ceux que vous aimez</h2>
-                            <p>Discutons ensemble de vos besoins en santé et prévoyance</p>
+                            <h2>Anticipez l'avenir dès aujourd'hui</h2>
+                            <p>Contactez FD Assurance pour une étude personnalisée de vos besoins</p>
                             <div className="cta-buttons">
                                 <Link to="/#contact" className="btn btn-primary">
-                                    Demander une étude
+                                    Contactez-nous pour plus de détails
                                 </Link>
                                 <Link to="/" className="btn btn-secondary">
                                     Retour à l'accueil

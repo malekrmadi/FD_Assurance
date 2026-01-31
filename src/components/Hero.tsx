@@ -1,4 +1,4 @@
-import heroImage from '../assets/hero-business.jpg';
+import logoMain from '../assets/fd-assurance-logo.png';
 import './Hero.css';
 
 const Hero = () => {
@@ -21,27 +21,20 @@ const Hero = () => {
             FD Assurance accompagne particuliers et professionnels dans le choix de garanties fiables et compétitives.
           </p>
           <div className="hero-actions">
-            <a 
-              href="#contact" 
+            <a
+              href="#contact"
               className="btn btn-primary"
               onClick={(e) => scrollToSection(e, '#contact')}
             >
-              Demander un devis
-            </a>
-            <a 
-              href="#contact" 
-              className="btn btn-secondary"
-              onClick={(e) => scrollToSection(e, '#contact')}
-            >
-              Être contacté
+              Contactez-nous pour plus de détails
             </a>
           </div>
         </div>
         <div className="hero-visual">
-          <img 
-            src={heroImage} 
-            alt="Protection et sécurité - FD Assurance" 
-            className="hero-image"
+          <img
+            src={logoMain}
+            alt="FD Assurance Logo"
+            className="hero-logo-img"
           />
         </div>
       </div>
