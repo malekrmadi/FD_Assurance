@@ -73,8 +73,20 @@ const Contact = () => {
                   </svg>
                 </div>
                 <div>
-                  <h4>Téléphone</h4>
-                  <p>01 23 45 67 89</p>
+                  <h4>Téléphone fixe</h4>
+                  <p>01 47 33 20 20</p>
+                </div>
+              </div>
+
+              <div className="contact-detail">
+                <div className="contact-detail-icon">
+                  <svg viewBox="0 0 24 24" className="icon">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </div>
+                <div>
+                  <h4>Téléphone portable</h4>
+                  <p>06 98 80 96 50</p>
                 </div>
               </div>
 
@@ -86,8 +98,22 @@ const Contact = () => {
                   </svg>
                 </div>
                 <div>
-                  <h4>Email</h4>
-                  <p>contact@fdassurance.fr</p>
+                  <h4>Emails</h4>
+                  <p>devis@fdassurance.com</p>
+                  <p>info@fdassurance.com</p>
+                </div>
+              </div>
+
+              <div className="contact-detail">
+                <div className="contact-detail-icon">
+                  <svg viewBox="0 0 24 24" className="icon">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" strokeLinecap="round" strokeLinejoin="round" />
+                    <circle cx="12" cy="10" r="3" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </div>
+                <div>
+                  <h4>Adresse</h4>
+                  <p>27 Bd Voltaire, 92600 – Asnières, France</p>
                 </div>
               </div>
             </div>

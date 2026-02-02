@@ -39,8 +39,25 @@ const Footer = () => {
           <div className="footer-contact">
             <h4 className="footer-title">Contact</h4>
             <div className="footer-contact-info">
-              <p>01 23 45 67 89</p>
-              <p>contact@fdassurance.fr</p>
+              <p>
+                <strong>Adresse :</strong><br />
+                27 Bd Voltaire<br />
+                92600 – Asnières<br />
+                France
+              </p>
+              <p>
+                <strong>Téléphone fixe :</strong><br />
+                01 47 33 20 20
+              </p>
+              <p>
+                <strong>Téléphone portable :</strong><br />
+                06 98 80 96 50
+              </p>
+              <p>
+                <strong>Emails :</strong><br />
+                devis@fdassurance.com<br />
+                info@fdassurance.com
+              </p>
             </div>
           </div>
 
