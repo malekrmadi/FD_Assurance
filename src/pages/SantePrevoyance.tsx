@@ -17,7 +17,7 @@ const SantePrevoyance = () => {
                 >
                     <div className="container">
                         <div className="hero-content">
-                            <h1 className="hero-title">Santé & Prévoyance</h1>
+                            <h1 className="hero-title">Santé & <span className="text-orange">Prévoyance</span></h1>
                             <p className="hero-subtitle">
                                 Prenez soin de vous et de vos proches. FD Assurance vous propose des solutions
                                 complètes pour couvrir vos frais de santé et anticiper les aléas de la vie.
@@ -37,7 +37,7 @@ const SantePrevoyance = () => {
                                 <img src={healthDetail} alt="Détail Santé & Prévoyance" className="detail-image" />
                             </div>
                             <div className="detail-content">
-                                <h2>Votre capital santé est votre bien le plus précieux</h2>
+                                <h2>Votre capital <span className="text-orange">santé</span> est votre bien le plus précieux</h2>
                                 <p>
                                     Face à l'évolution des remboursements de la Sécurité Sociale, disposer d'une excellente
                                     complémentaire santé est devenu indispensable pour garantir l'accès aux meilleurs soins
@@ -74,7 +74,7 @@ const SantePrevoyance = () => {
                 <section className="section section-alt insurance-support">
                     <div className="container">
                         <div className="section-title">
-                            <h2>Notre accompagnement</h2>
+                            <h2>Notre <span className="text-orange">accompagnement</span></h2>
                             <p>Un conseil humain pour des enjeux de vie essentiels</p>
                         </div>
 
@@ -130,7 +130,7 @@ const SantePrevoyance = () => {
                 <section className="section insurance-guarantees">
                     <div className="container">
                         <div className="section-title">
-                            <h2>Points clés & garanties</h2>
+                            <h2>Points clés & <span className="text-orange">garanties</span></h2>
                             <p>Des garanties solides pour votre futur</p>
                         </div>
 

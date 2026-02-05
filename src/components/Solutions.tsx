@@ -56,7 +56,7 @@ const Solutions = () => {
     <section id="solutions" className="section solutions">
       <div className="container">
         <div className="section-title">
-          <h2>Nos solutions d'assurance</h2>
+          <h2>Nos solutions <span className="text-orange">d'assurance</span></h2>
           <p>Des garanties adaptées à chaque situation, pour particuliers et professionnels.</p>
         </div>
 

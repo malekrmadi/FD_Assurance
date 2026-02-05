@@ -17,7 +17,7 @@ const AssuranceAuto = () => {
                 >
                     <div className="container">
                         <div className="hero-content">
-                            <h1 className="hero-title">Assurance Auto</h1>
+                            <h1 className="hero-title">Assurance <span className="text-orange">Auto</span></h1>
                             <p className="hero-subtitle">
                                 Protégez votre véhicule avec une assurance auto adaptée à vos besoins.
                                 FD Assurance vous accompagne pour trouver la meilleure couverture.
@@ -37,7 +37,7 @@ const AssuranceAuto = () => {
                                 <img src={autoDetail} alt="Détail Assurance Auto" className="detail-image" />
                             </div>
                             <div className="detail-content">
-                                <h2>Sérénité et sécurité sur la route</h2>
+                                <h2>Sérénité et sécurité sur la <span className="text-orange">route</span></h2>
                                 <p>
                                     L'assurance automobile est bien plus qu'une obligation légale. C'est le garant de votre
                                     tranquillité d'esprit à chaque kilomètre. Que vous soyez un conducteur quotidien ou
@@ -74,7 +74,7 @@ const AssuranceAuto = () => {
                 <section className="section section-alt insurance-support">
                     <div className="container">
                         <div className="section-title">
-                            <h2>Notre accompagnement</h2>
+                            <h2>Notre <span className="text-orange">accompagnement</span></h2>
                             <p>Ce que FD Assurance met en place pour votre assurance auto</p>
                         </div>
 
@@ -129,7 +129,7 @@ const AssuranceAuto = () => {
                 <section className="section insurance-guarantees">
                     <div className="container">
                         <div className="section-title">
-                            <h2>Points clés & garanties</h2>
+                            <h2>Points clés & <span className="text-orange">garanties</span></h2>
                             <p>Les éléments essentiels de votre assurance auto</p>
                         </div>
 

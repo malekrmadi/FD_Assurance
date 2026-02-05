@@ -1,4 +1,4 @@
-import logoMain from '../assets/fd-assurance-logo.png';
+import logoMain from '../assets/logo_orange.jfif';
 import './Footer.css';
 
 const Footer = () => {

@@ -17,7 +17,7 @@ const ResponsabiliteCivile = () => {
                 >
                     <div className="container">
                         <div className="hero-content">
-                            <h1 className="hero-title">Responsabilité Civile</h1>
+                            <h1 className="hero-title">Responsabilité <span className="text-orange">Civile</span></h1>
                             <p className="hero-subtitle">
                                 Face aux dommages causés à autrui, ne restez pas sans protection.
                                 FD Assurance sécurise votre responsabilité au quotidien.
@@ -37,7 +37,7 @@ const ResponsabiliteCivile = () => {
                                 <img src={liabilityDetail} alt="Détail Responsabilité Civile" className="detail-image" />
                             </div>
                             <div className="detail-content">
-                                <h2>Protéger votre avenir financier face à l'imprévu</h2>
+                                <h2>Protéger votre avenir financier face à <span className="text-orange">l'imprévu</span></h2>
                                 <p>
                                     Que ce soit par inattention, par imprudence ou par négligence, nous pouvons tous causer
                                     un préjudice à un tiers. La Responsabilité Civile est l'obligation de réparer ces dommages.
@@ -74,7 +74,7 @@ const ResponsabiliteCivile = () => {
                 <section className="section section-alt insurance-support">
                     <div className="container">
                         <div className="section-title">
-                            <h2>Notre accompagnement</h2>
+                            <h2>Notre <span className="text-orange">accompagnement</span></h2>
                             <p>Une expertise juridique et assurantielle à votre service</p>
                         </div>
 
@@ -131,7 +131,7 @@ const ResponsabiliteCivile = () => {
                 <section className="section insurance-guarantees">
                     <div className="container">
                         <div className="section-title">
-                            <h2>Points clés & garanties</h2>
+                            <h2>Points clés & <span className="text-orange">garanties</span></h2>
                             <p>Les piliers de votre protection civile</p>
                         </div>
 

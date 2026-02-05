@@ -6,10 +6,12 @@
 /* CSS Variables - Design Tokens */
 :root {
   /* Colors */
-  --color-primary: #0A4D8C;
-  --color-primary-dark: #083D6F;
-  --color-primary-light: #E8F4FC;
-  --color-accent: #2E86DE;
+  --color-primary: #1800ad;
+  --color-primary-dark: #120082;
+  --color-primary-light: #f0f0ff;
+  --color-accent: #da6220;
+  --color-orange: #da6220;
+  --color-orange-dark: #b34f1a;
 
   --color-white: #FFFFFF;
   --color-background: #FAFBFC;
@@ -210,15 +212,19 @@ select {
 }
 
 .btn-primary {
-  background-color: var(--color-primary);
+  background-color: var(--color-orange);
   color: var(--color-white);
 }
 
 .btn-primary:hover {
-  background-color: var(--color-primary-dark);
+  background-color: var(--color-orange-dark);
   color: var(--color-white);
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
+}
+
+.text-orange {
+  color: var(--color-orange);
 }
 
 .btn-secondary {

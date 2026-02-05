@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
 
-import logoNavbar from '../assets/fd-assurance-logo-navbar.png';
+import logoNavbar from '../assets/logo_orange.jfif';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

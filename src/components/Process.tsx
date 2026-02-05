@@ -29,19 +29,19 @@ const Process = () => {
     <section id="approche" className="section section-alt process">
       <div className="container">
         <div className="section-title">
-          <h2>Notre approche</h2>
+          <h2>Notre <span className="text-orange">approche</span></h2>
           <p>Une méthodologie claire et structurée pour vous accompagner efficacement.</p>
         </div>
-        
+
         <div className="process-content">
           <div className="process-image-wrapper">
-            <img 
-              src={processImage} 
-              alt="Consultation et accompagnement" 
+            <img
+              src={processImage}
+              alt="Consultation et accompagnement"
               className="process-image"
             />
           </div>
-          
+
           <div className="process-timeline">
             {steps.map((step, index) => (
               <div key={index} className="process-step">

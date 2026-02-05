@@ -69,7 +69,7 @@ const WhyUs = () => {
     <section id="avantages" className="section whyus">
       <div className="container">
         <div className="section-title">
-          <h2>Pourquoi choisir FD Assurance ?</h2>
+          <h2>Pourquoi choisir <span className="text-orange">FD Assurance</span> ?</h2>
           <p>Des avantages concrets pour une assurance en toute sérénité.</p>
         </div>
 

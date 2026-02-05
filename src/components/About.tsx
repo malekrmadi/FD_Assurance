@@ -34,7 +34,7 @@ const About = () => {
           </div>
 
           <div className="about-content">
-            <h2 className="about-title">Le cabinet FD Assurance</h2>
+            <h2 className="about-title">Le cabinet <span className="text-orange">FD Assurance</span></h2>
             <p className="about-text">
               FD Assurance est un cabinet de courtage indépendant spécialisé dans l'accompagnement
               des particuliers et des professionnels. Notre mission : vous aider à identifier

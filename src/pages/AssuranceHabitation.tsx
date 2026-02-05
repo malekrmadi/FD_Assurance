@@ -17,7 +17,7 @@ const AssuranceHabitation = () => {
                 >
                     <div className="container">
                         <div className="hero-content">
-                            <h1 className="hero-title">Assurance Habitation</h1>
+                            <h1 className="hero-title">Assurance <span className="text-orange">Habitation</span></h1>
                             <p className="hero-subtitle">
                                 Protégez votre foyer et vos biens précieux. FD Assurance vous aide à trouver
                                 la couverture idéale pour votre maison ou votre appartement.
@@ -37,7 +37,7 @@ const AssuranceHabitation = () => {
                                 <img src={homeDetail} alt="Détail Assurance Habitation" className="detail-image" />
                             </div>
                             <div className="detail-content">
-                                <h2>Sérénité et sécurité pour votre logement</h2>
+                                <h2>Sérénité et sécurité pour votre <span className="text-orange">logement</span></h2>
                                 <p>
                                     Votre foyer est bien plus qu'un simple toit. C'est l'endroit où vous construisez votre vie.
                                     Une bonne assurance habitation est essentielle pour faire face aux imprévus : dégâts des eaux,
@@ -75,7 +75,7 @@ const AssuranceHabitation = () => {
                 <section className="section section-alt insurance-support">
                     <div className="container">
                         <div className="section-title">
-                            <h2>Notre accompagnement</h2>
+                            <h2>Notre <span className="text-orange">accompagnement</span></h2>
                             <p>Une expertise dédiée à la protection de votre patrimoine</p>
                         </div>
 
@@ -129,7 +129,7 @@ const AssuranceHabitation = () => {
                 <section className="section insurance-guarantees">
                     <div className="container">
                         <div className="section-title">
-                            <h2>Points clés & garanties</h2>
+                            <h2>Points clés & <span className="text-orange">garanties</span></h2>
                             <p>L'essentiel de votre contrat Multirisques Habitation</p>
                         </div>
 

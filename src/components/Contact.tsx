@@ -51,7 +51,7 @@ const Contact = () => {
       <div className="container">
         <div className="contact-grid">
           <div className="contact-info">
-            <h2 className="contact-title">Demandez votre devis</h2>
+            <h2 className="contact-title">Demandez votre <span className="text-orange">devis</span></h2>
             <p className="contact-text">
               Remplissez le formulaire ci-contre et nous vous recontacterons
               dans les plus brefs délais pour étudier votre demande.
