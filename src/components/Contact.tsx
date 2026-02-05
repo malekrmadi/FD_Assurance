@@ -2,8 +2,13 @@ import { useState } from 'react';
 import contactImage from '../assets/contact.jpg';
 import './Contact.css';
 
+const GOOGLE_APPS_SCRIPT_URL =
+  'https://script.google.com/macros/s/AKfycbw200Nln4uLIZal-bjYQBR2I98Pkw7nhmrRqaQ1By8WgXP142gBhpgW9DDnO1eq7w0dng/exec';
+
+const API_KEY = 'CONTACT_FORM_2025';
+
 const insuranceTypes = [
-  { value: '', label: 'Sélectionnez un type d\'assurance' },
+  { value: '', label: "Sélectionnez un type d'assurance" },
   { value: 'auto', label: 'Assurance Auto' },
   { value: 'habitation', label: 'Assurance Habitation' },
   { value: 'sante', label: 'Santé & Prévoyance' },
@@ -23,18 +28,38 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+    const payload = {
+      api_key: API_KEY,
+      nom: formData.nom,
+      email: formData.email,
+      telephone: formData.telephone,
+      type: formData.type,
+      message: formData.message,
+    };
+
+    try {
+      await fetch(GOOGLE_APPS_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      });
+
       setIsSubmitted(true);
       setFormData({
         nom: '',
@@ -43,7 +68,11 @@ const Contact = () => {
         type: '',
         message: '',
       });
-    }, 1000);
+    } catch (error) {
+      console.error('Erreur envoi formulaire', error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -51,7 +80,9 @@ const Contact = () => {
       <div className="container">
         <div className="contact-grid">
           <div className="contact-info">
-            <h2 className="contact-title">Demandez votre <span className="text-orange">devis</span></h2>
+            <h2 className="contact-title">
+              Demandez votre <span className="text-orange">devis</span>
+            </h2>
             <p className="contact-text">
               Remplissez le formulaire ci-contre et nous vous recontacterons
               dans les plus brefs délais pour étudier votre demande.
@@ -69,7 +100,7 @@ const Contact = () => {
               <div className="contact-detail">
                 <div className="contact-detail-icon">
                   <svg viewBox="0 0 24 24" className="icon">
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                   </svg>
                 </div>
                 <div>
@@ -81,7 +112,7 @@ const Contact = () => {
               <div className="contact-detail">
                 <div className="contact-detail-icon">
                   <svg viewBox="0 0 24 24" className="icon">
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                   </svg>
                 </div>
                 <div>
@@ -93,8 +124,8 @@ const Contact = () => {
               <div className="contact-detail">
                 <div className="contact-detail-icon">
                   <svg viewBox="0 0 24 24" className="icon">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" strokeLinecap="round" strokeLinejoin="round" />
-                    <polyline points="22,6 12,13 2,6" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
                   </svg>
                 </div>
                 <div>
@@ -107,8 +138,8 @@ const Contact = () => {
               <div className="contact-detail">
                 <div className="contact-detail-icon">
                   <svg viewBox="0 0 24 24" className="icon">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" strokeLinecap="round" strokeLinejoin="round" />
-                    <circle cx="12" cy="10" r="3" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
                   </svg>
                 </div>
                 <div>
@@ -124,8 +155,8 @@ const Contact = () => {
               <div className="form-success">
                 <div className="form-success-icon">
                   <svg viewBox="0 0 24 24" className="icon-lg">
-                    <circle cx="12" cy="12" r="10" strokeLinecap="round" strokeLinejoin="round" />
-                    <path d="M9 12l2 2 4-4" strokeLinecap="round" strokeLinejoin="round" />
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M9 12l2 2 4-4" />
                   </svg>
                 </div>
                 <h3>Demande envoyée !</h3>
@@ -153,6 +184,7 @@ const Contact = () => {
                       required
                     />
                   </div>
+
                   <div className="form-group">
                     <label className="form-label" htmlFor="email">Email</label>
                     <input
@@ -182,6 +214,7 @@ const Contact = () => {
                       required
                     />
                   </div>
+
                   <div className="form-group">
                     <label className="form-label" htmlFor="type">Type d'assurance</label>
                     <select
